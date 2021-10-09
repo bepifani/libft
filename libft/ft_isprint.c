@@ -6,13 +6,13 @@
 /*   By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:34:39 by bepifani          #+#    #+#             */
-/*   Updated: 2021/10/05 14:47:28 by bepifani         ###   ########.fr       */
+/*   Updated: 2021/10/09 16:11:48 by bepifani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	ft_isprint(unsigned char c)
 {
-	if (c >= 0x20 && c <= 0x7e)
-		return (1);
+	if (c >= 32 && c <= 126)
+		return (c);
 	return (0);
 }

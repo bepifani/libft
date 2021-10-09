@@ -6,13 +6,13 @@
 /*   By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 15:44:06 by bepifani          #+#    #+#             */
-/*   Updated: 2021/10/05 18:42:59 by bepifani         ###   ########.fr       */
+/*   Updated: 2021/10/09 18:25:31 by bepifani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		c = c + 30;
+		c = c - 'a' + 'A';
 	return (c);
 }

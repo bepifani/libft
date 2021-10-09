@@ -6,7 +6,7 @@
 /*   By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:48:39 by bepifani          #+#    #+#             */
-/*   Updated: 2021/10/05 18:37:45 by bepifani         ###   ########.fr       */
+/*   Updated: 2021/10/09 16:07:37 by bepifani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, '0', n);
+	ft_memset(s, '\0', n);
 }

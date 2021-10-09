@@ -6,14 +6,15 @@
 /*   By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 13:15:13 by bepifani          #+#    #+#             */
-/*   Updated: 2021/10/05 13:19:45 by bepifani         ###   ########.fr       */
+/*   Updated: 2021/10/09 16:32:48 by bepifani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isalnum(int a)
 {
-	if ((a >= 060 && a <= 071) || (a <= 132 && a >= 101)
-		|| (a >= 141 && a <= 172))
-		return (1);
+	if (ft_isalpha(a) || ft_isdigit(a))
+		return (a);
 	return (0);
 }

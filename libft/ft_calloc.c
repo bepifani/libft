@@ -1,41 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 17:37:34 by bepifani          #+#    #+#             */
-/*   Updated: 2021/10/09 19:33:50 by bepifani         ###   ########.fr       */
+/*   Created: 2021/10/09 16:15:27 by bepifani          #+#    #+#             */
+/*   Updated: 2021/10/09 16:33:20 by bepifani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+void	*ft_calloc(size_t count, size_t size)
 {
-	char	*hay;
-	size_t	l;
-	size_t	i;
-	size_t	j;
+	void	*a;
 
-	hay = (char *)haystack;
-	l = ft_strlen(needle);
-	if (!l)
-		return (hay);
-	if (ft_strlen(haystack) < l || len < l)
-		return (NULL);
-	i = 0;
-	while (hay[i] && i < len - l)
-	{
-		j = 0;
-		while (needle[j] && needle[j] == hay[i + j])
-		{
-			j++;
-		}
-		if (j == l)
-			return (&hay[i]);
-		i++;
-	}
-	return (NULL);
+	a = malloc(count * size);
+	if (a == 0)
+		return (0);
+	ft_bzero(a, count * size);
+	return (a);
 }

@@ -6,23 +6,24 @@
 /*   By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:04:53 by bepifani          #+#    #+#             */
-/*   Updated: 2021/10/05 19:18:07 by bepifani         ###   ########.fr       */
+/*   Updated: 2021/10/09 18:50:49 by bepifani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*a;
+	char	b;
 
-	a = 0;
-	while (*s++)
+	a = (char *)s + ft_strlen(s);
+	b = (char)c;
+	while (a >= s)
 	{
-		if (*s == c)
-			a = (char *)s;
+		if (*a == b)
+			return (a);
+		a--;
 	}
-	if (a)
-		return (a);
-	if (c == '\0')
-		return ((char *)s);
 	return (0);
 }

@@ -6,13 +6,15 @@
 /*   By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 14:37:57 by bepifani          #+#    #+#             */
-/*   Updated: 2021/10/05 19:28:53 by bepifani         ###   ########.fr       */
+/*   Updated: 2021/10/09 17:10:15 by bepifani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
