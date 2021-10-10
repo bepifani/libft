@@ -6,9 +6,11 @@
 /*   By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 17:53:04 by bepifani          #+#    #+#             */
-/*   Updated: 2021/10/05 18:12:16 by bepifani         ###   ########.fr       */
+/*   Updated: 2021/10/10 14:50:38 by bepifani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
@@ -17,7 +19,8 @@ int	ft_atoi(const char *str)
 
 	i = 0;
 	b = 0;
-	while (*str == ' ' || *str == '\n' || *str == '\v')
+	while (*str == ' ' || *str == '\n' || *str == '\v'
+		|| *str == '\t' || *str == '\f' || *str == '\r')
 		str++;
 	if (*str == '-')
 		b++;

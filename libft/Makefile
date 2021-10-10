@@ -6,18 +6,19 @@
 #    By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:48:01 by bepifani          #+#    #+#              #
-#    Updated: 2021/10/09 18:15:06 by bepifani         ###   ########.fr        #
+#    Updated: 2021/10/10 19:53:21 by bepifani         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = ft_atoi	ft_bzero	ft_isalnum	ft_isalpha\
+SRC = 	ft_atoi		ft_bzero	ft_isalnum	ft_isalpha\
 		ft_isascii	ft_isdigit	ft_isprint	ft_memchr\
 		ft_memcmp	ft_memmove	ft_memset	ft_strchr	ft_strlcat\
 		ft_strlcpy	ft_strlen	ft_strncmp	ft_strnstr\
 		ft_strrchr	ft_tolower	ft_toupper	ft_calloc\
-		ft_strdup	ft_memcpy
+		ft_strdup	ft_memcpy	ft_substr	ft_strjoin\
+		ft_strtrim	ft_split	ft_itoa		ft_strmapi
 
 SRCS = $(addsuffix .c, $(SRC))
 

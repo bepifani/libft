@@ -6,7 +6,7 @@
 /*   By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 18:27:25 by bepifani          #+#    #+#             */
-/*   Updated: 2021/10/09 17:32:40 by bepifani         ###   ########.fr       */
+/*   Updated: 2021/10/10 19:52:55 by bepifani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,11 @@ int		ft_toupper(int c);
 void	*ft_memcpy(void *dest, const void *src, size_t len);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int a);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
