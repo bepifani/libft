@@ -6,7 +6,7 @@
 /*   By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:33:58 by bepifani          #+#    #+#             */
-/*   Updated: 2021/10/09 19:11:08 by bepifani         ###   ########.fr       */
+/*   Updated: 2021/10/11 14:10:55 by bepifani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	size_t	i;
 
 	i = 0;
-	str = malloc(sizeof(char) * ft_strlen(s1));
+	str = malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (str == 0)
 		return (NULL);
 	while (s1[i])

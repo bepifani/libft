@@ -6,7 +6,7 @@
 /*   By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 15:13:11 by bepifani          #+#    #+#             */
-/*   Updated: 2021/10/09 15:52:21 by bepifani         ###   ########.fr       */
+/*   Updated: 2021/10/11 13:53:47 by bepifani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	if (d < s)
 	{
 		while (len > 0)

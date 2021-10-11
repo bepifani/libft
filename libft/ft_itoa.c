@@ -6,7 +6,7 @@
 /*   By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 16:56:23 by bepifani          #+#    #+#             */
-/*   Updated: 2021/10/10 19:49:53 by bepifani         ###   ########.fr       */
+/*   Updated: 2021/10/11 18:05:59 by bepifani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,7 @@ void	ft_nb(long n, char *str, int *i)
 		ft_nb((n % 10), str, i);
 	}
 	else
-	{
 		str[(*i)++] = n + '0';
-	}
 }
 
 char	*ft_itoa(int a)
@@ -50,7 +48,7 @@ char	*ft_itoa(int a)
 	long	n;
 
 	n = a;
-	str = (char *)malloc(sizeof(char) * ((ft_number(n)) + 1));
+	str = (char *)malloc(sizeof(char) * ((ft_number(n)) + 2));
 	if (!str)
 		return (NULL);
 	i = 0;

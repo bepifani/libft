@@ -6,7 +6,7 @@
 /*   By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 19:51:05 by bepifani          #+#    #+#             */
-/*   Updated: 2021/10/10 20:05:59 by bepifani         ###   ########.fr       */
+/*   Updated: 2021/10/11 18:43:36 by bepifani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	int		b;
 
-	b = ft_strlen(s);
 	i = 0;
-	str = (char *)malloc(sizeof(char) * (b + 1));
+	if (s == NULL )
+		return (NULL);
+	b = ft_strlen(s);
+	str = malloc(sizeof(char) * (b + 1));
 	if (!str)
 		return (NULL);
 	while (i < b)

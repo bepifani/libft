@@ -6,7 +6,7 @@
 /*   By: bepifani <bepifani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 14:03:02 by bepifani          #+#    #+#             */
-/*   Updated: 2021/10/10 16:55:05 by bepifani         ###   ########.fr       */
+/*   Updated: 2021/10/11 18:03:37 by bepifani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ char	**ft_split(char const *s, char c)
 	unsigned int	nb;
 	unsigned int	i;
 
+	if (s == NULL)
+		return (NULL);
 	nb = ft_find_str(s, c);
 	tab = malloc(sizeof(char *) * (nb + 1));
 	if (!tab)
@@ -92,8 +94,7 @@ char	**ft_split(char const *s, char c)
 		tab[i] = malloc(sizeof(char) * (next_s + 1));
 		if (!tab[i])
 			return (ft_malloc_chaek(tab));
-		ft_strlcpy(tab[i], next, next_s + 1);
-		i++;
+		ft_strlcpy(tab[i++], next, next_s + 1);
 	}
 	tab[i] = NULL;
 	return (tab);
